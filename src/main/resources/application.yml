@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    hikari:
+      driver-class-name: org.postgresql.Driver
+      connection-timeout: 3000
+      minimum-idle: 3
+      idle-timeout: 600000
+      maximum-pool-size: 30
+      leak-detection-threshold: 20000
+
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  consumer:
+    group-id: user-service
