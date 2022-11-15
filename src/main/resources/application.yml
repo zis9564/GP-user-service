@@ -1,26 +1,28 @@
-server:
-  port: 8081
-
-spring:
-  jpa:
-    database: postgresql
-    show-sql: true
-    hibernate:
-      ddl-auto: none
-  datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
-    username: ${POSTGRES_USER}
-    password: ${POSTGRES_PASSWORD}
-    hikari:
-      driver-class-name: org.postgresql.Driver
-      connection-timeout: 3000
-      minimum-idle: 3
-      idle-timeout: 600000
-      maximum-pool-size: 30
-      leak-detection-threshold: 20000
-
-kafka:
-  bootstrap:
-    servers: localhost:9092
-  consumer:
-    group-id: user-service
+#server:
+#  port: 8071
+#app:
+#  kafka:
+#    producer:
+#      topic: users
+#    consumer:
+#      topic: users
+#spring:
+#  kafka:
+#    properties:
+#      schema.registry.url: http://172.17.0.1:8081
+#      auto.register.schemas: false
+#      use.latest.version: true
+#      json:
+#        fail.invalid.schema: true
+#        oneof.for.nullables: false
+#        write.dates.iso8601: true
+#    producer:
+#      bootstrap-servers: 172.17.0.1:9092
+#      retries: 0
+#      acks: all
+#      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+#      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+#    consumer:
+#      bootstrap-servers: 172.17.0.1:9092
+#      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+#      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer

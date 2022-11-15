@@ -1,0 +1,36 @@
+{
+    "type": "record",
+    "name": "User",
+    "namespace": "com.zis.guavapay",
+    "fields": [{
+        "name": "id",
+        "type": {
+            "avro.java.int": "Integer",
+            "type": "int"
+        }
+    }, {
+        "name": "lastname",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    }, {
+        "name": "name",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    }, {
+        "name": "phone",
+        "type": {
+            "avro.java.string": "String",
+            "type": "string"
+        }
+    }, {
+        "name": "role",
+        "type": {
+            "avro.java.int": "Integer",
+            "type": "int"
+        }
+    }]
+}

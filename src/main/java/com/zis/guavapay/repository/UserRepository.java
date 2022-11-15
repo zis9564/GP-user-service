@@ -1,2 +1,3 @@
-package com.zis.guavapay.repository;public interface UserRepository {
-}
+package com.zis.guavapay.repository;
+
+public interface UserRepository {}
