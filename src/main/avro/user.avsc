@@ -3,11 +3,9 @@
     "name": "User",
     "namespace": "com.zis.guavapay",
     "fields": [{
-        "name": "id",
-        "type": {
-            "avro.java.int": "Integer",
-            "type": "int"
-        }
+       "name": "id",
+       "type": ["null", "string"],
+       "default": null
     }, {
         "name": "lastname",
         "type": {
@@ -29,8 +27,8 @@
     }, {
         "name": "role",
         "type": {
-            "avro.java.int": "Integer",
-            "type": "int"
+            "avro.java.string": "String",
+            "type": "string"
         }
     }]
 }
