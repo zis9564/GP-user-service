@@ -1,8 +1,9 @@
 package com.zis.guavapay;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Locale;
 
 @SpringBootApplication
 public class UserServiceApplication {
